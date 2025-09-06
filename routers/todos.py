@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Depends, HTTPException, Path, Request
-from ..models import Todos
-from ..database import SessionLocal
+from models import Todos
+from database import SessionLocal
 from sqlalchemy.orm import Session
 from starlette import status
 from pydantic import BaseModel, Field
 from typing import Annotated
-from .auth import get_current_user
+from routers.auth import get_current_user
 from starlette.responses import RedirectResponse
 from fastapi.templating import Jinja2Templates
 
